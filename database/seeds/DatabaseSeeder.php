@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Ebent;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::truncate();
+        factory(User::class,5)->create();
        Ebent::truncate();
        $ebentQnt=20;
        factory(Ebent::class,$ebentQnt)->create();

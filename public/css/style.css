@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash')
+#navigation-menu{
+}
+#navie{
+    height: 90px !important;
+    -webkit-box-shadow: 0px 4px 20px 4px rgba(163,155,163,0.67);
+    -moz-box-shadow: 0px 4px 20px 4px rgba(163,155,163,0.67);
+    box-shadow: 0px 4px 20px 4px rgba(163,155,163,0.67);
+    border-radius: 0;
+}
+.menu{
+    margin-left:250px !important;
+}
+.menu li{
+    padding:10px;
+}
+.menu li a{
+    font-family: 'Berkshire Swash', cursive;
+    font-size:20px;
+    color:#2c3e50;
+}
+.activevent{
+    width:auto;
+    height: 90px;
+    color:#95a5a6;
+    border-bottom: 5px solid transparent;
+}
+.activevent:hover {
+    border-bottom: 5px solid #E91E63;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

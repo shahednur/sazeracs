@@ -14,5 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('events','EbentController@index')->name('events');
-Route::get('events/view/{event}','EbentController@view')->name('event-view');
+Route::group(['middleware'=>'auth'],function(){
+    /**
+     * Event related routes
+     */
+    Route::get('events','EbentController@index')->name('events');
+    Route::get('events/add','EbentController@add')->name('event-add');
+    Route::post('events/save','EbentController@store')->name('event-save');
+    Route::get('events/view/{event}','EbentController@view')->name('event-view');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

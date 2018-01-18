@@ -22,6 +22,7 @@ class CreateEbentsTable extends Migration
             $table->float('long',10,6);
             $table->date('start_date');
             $table->date('end_date');
+            $table->string('slug');
             $table->unsignedInteger('user_id');
             $table->timestamps();
 

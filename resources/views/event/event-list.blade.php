@@ -16,7 +16,7 @@
                         </div>
                         <div class="cal-event-desc">
                             <div class="cal-event-title">
-                                <a href="{{route('event-view',$upcoming->id)}}"> {{$upcoming->title}}</a>
+                                <a href="{{route('event-view',$upcoming->slug)}}"> {{$upcoming->title}}</a>
                             </div>
                             <div class="cal-event-time">
                                 <icon><i class="fa fa-clock-o"></i></icon>12.15pm
@@ -47,7 +47,7 @@
                             </div>
                             <div class="cal-event-desc">
                                 <div class="cal-event-title">
-                                    <a href="{{route('event-view',$past->id)}}">{{$past->title}}</a>
+                                    <a href="{{route('event-view',$past->slug)}}">{{$past->title}}</a>
                                 </div>
                                 <div class="cal-event-time">
                                     <icon><i class="fa fa-clock-o"></i></icon>10.5am

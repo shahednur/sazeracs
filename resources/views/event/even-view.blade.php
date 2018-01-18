@@ -15,22 +15,30 @@
                             <small class="add">Event Start date:&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar-check-o"></i>&nbsp;&nbsp;{{$event->start_date}}</small><br>
                             <small class="add">Event End date:&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar-check-o"></i>&nbsp;&nbsp;{{$event->end_date}}</small><br>
                             <p class="card-text add">Event Created by:&nbsp;&nbsp;&nbsp;<small class="text-muted">{{$event->creator->name}}</small></p>
+                            <hr>
+                            <div class="col-md-3"><i class="fa fa-facebook fa-2x"></i></div>
+                            <div class="col-md-3"><i class="fa fa-twitter fa-2x"></i></div>
+                            <div class="col-md-3"><i class="fa fa-youtube fa-2x"></i></div>
+                            <div class="col-md-3"><i class="fa fa-google fa-2x"></i></div>
                         </div>
                         <div class="col-md-6">
                             <h4>Event Description</h4>
-                            <p class="card-text event-body">{{$event->description}}</p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <h4>Event Location</h4>
-
+                            <p class="card-text event-body">{!! $event->description !!}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <h3>Events</h3>
-                <p class="cart-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur doloremque earum enim esse eveniet fuga illo inventore ipsa ipsum nemo nisi numquam odit officiis quasi, quos voluptas. Odit, vel.</p>
+                <div class="card" style="width: 40rem;">
+                    <div class="card-header">
+                        Upcoming Events
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach($upcomingEvents as $upcoming)
+                        <li class="list-group-item"><a href="{{route('event-view',$upcoming->id)}}">{{$upcoming->title}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
